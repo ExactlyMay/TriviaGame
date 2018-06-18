@@ -73,17 +73,17 @@ function checkAnswer(answer){
     {
       correctCounter++;
       $("#question").hide();   
-      $("#choices").html( "<p>Great job!</p>" ); 
+      $("#choices").html( "<p>Wow, you got it!</p>" ); 
       $("#choices").append("<img id='imgCorrect' src=" + correctImage + " />");
       stop(); 
     }
     else{
       incorrectCounter++;
-      $( "#choices" ).html( "<p>Better luck next time!</p>" ); 
+      $( "#choices" ).html( "<p>That's the wrong answer...</p>" ); 
       wrongAnswer(); 
     }
     questionCounter++;
-    setTimeout(resetQuestion, 1000 * 2);
+    setTimeout(resetQuestion, 1000 * 3);
   });
 }
 
@@ -95,7 +95,7 @@ function decrement() {
     $( "#choices" ).html( "<p>Out of time!</p>" ); 
     wrongAnswer();
     questionCounter++;
-    setTimeout(resetQuestion, 1000 * 2);
+    setTimeout(resetQuestion, 1000 * 3);
   }
   
 }
@@ -129,7 +129,7 @@ function resetQuestion() {
 
 function wrongAnswer() {
   $( "#question" ).hide();   
-  $( "#choices" ).append( "<p>Correct Answer: " + correctAnswer + "</p>");
+  $( "#choices" ).append( "<p>The correct answer was: " + correctAnswer + "</p>");
   $("#choices").append("<img id='imgWrong' src=" + correctImage + " />");
   stop();   
 }
