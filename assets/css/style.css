@@ -1,6 +1,3 @@
-/* Margin: Top/Right is 0, Right/Left is auto
-Padding: Top/Right is 40px, Right/Left is 10px */
-
 .wrapper {
     margin: 0 auto;
     max-width: 960px;
@@ -8,19 +5,9 @@ Padding: Top/Right is 40px, Right/Left is 10px */
     text-align: center;
 }
 
-.container {
+.container, .content {
     position: relative;
 }
-
-#chosen-character {
-    float: left;
-    width: 100%;
-    overflow: hidden;
-  }
-
-#chosen-enemy {
-    overflow: hidden;
-  }
 
 body{
     background-repeat: no-repeat;
@@ -43,18 +30,24 @@ h1 {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    padding: 25px;
     border: none;
-    font: normal 55px/1 "Fredoka One", Helvetica, sans-serif;
-    color: #FBD969;
+    font: normal 55px/1 'Baloo';
+    color: #ffd969;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: 45px 0 30px 25px;
+    margin: 20px 0 0 0;
+    padding: 25px;
+    transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
     -o-text-overflow: clip;
     text-overflow: clip;
-    text-shadow: 3px 3px 0 #E05849 , 4px 4px 0 #e05849 , 5px 5px 0 #e05849 , 6px 6px 0 #e05849 , 7px 7px 0 #9993C1 , 8px 8px 0 #9993C1 , 9px 9px 0 #9993C1 , 10px 10px 0 #9993C1 ;
-    animation-name: animation;
+    text-shadow: 1px 2px 0 #fff , 1px 3px 0 #fff, -1px 0 1px #1b233d, 0 1px 1px #1b233d, -1px -1px 1px #1b233d, 1px -1px 1px #1b233d, 2px -1px 1px #1b233d, 1px 1px 1px #1b233d, 2px 1px 1px #1b233d, 1px 2px 1px #1b233d,  2px 2px 1px #1b233d, 1px 3px 1px #1b233d, 2px 3px 1px #1b233d,0px 4px 1px #1b233d, 1px 4px 1px #1b233d, 2px 4px 1px #1b233d, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px;
+    /* animation-name: animation;
     animation-timing-function:ease;
-    animation-duration: 10s;
+    animation-duration: 5s; */
 }
 
 p {
@@ -64,65 +57,57 @@ p {
     box-sizing: content-box;
     padding: 10px;
     border: none;
-    font: normal 25px/1 "Fredoka One", Helvetica, sans-serif;
-    color: #E8E7F3;
-    text-shadow: -1px 0 #252A85, 0 1px #252A85, 1px 0 #252A85, 0 -1px #252A85;
+    font: bold 45px/1 'Baloo';
+    color: #fff;
+    text-shadow: -1px 0 1px #1b233d, 0 1px 1px #1b233d, -1px -1px 1px #1b233d, 1px -1px 1px #1b233d, 2px -1px 1px #1b233d, 1px 1px 1px #1b233d, 2px 1px 1px #1b233d, 1px 2px 1px #1b233d,  2px 2px 1px #1b233d, 1px 3px 1px #1b233d, 2px 3px 1px #1b233d,0px 4px 1px #1b233d, 1px 4px 1px #1b233d, 2px 4px 1px #1b233d, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px;
     text-align: center;
     -o-text-overflow: clip;
     text-overflow: clip;
 }
-
-#number-text, #wins-losses-text, #score-text {
-    color: #FBD969;
+#questionText {
+    font-size: 40px;
 }
- 
-table{
-    width: 100%;
+#timeText {
+    font-size: 35px;
+    text-shadow: 1px 2px 0 #9E164B , 1px 3px 0 #9E164B, -1px 0 1px #9E164B, 0 1px 1px #9E164B, -1px 0 1px #1b233d, 0 1px 1px #1b233d, -1px -1px 1px #1b233d, 1px -1px 1px #1b233d, 2px -1px 1px #1b233d, 1px 1px 1px #1b233d, 2px 1px 1px #1b233d, 1px 2px 1px #1b233d,  2px 2px 1px #1b233d, 1px 3px 1px #1b233d, 2px 3px 1px #1b233d,0px 4px 1px #1b233d, 1px 4px 1px #1b233d, 2px 4px 1px #1b233d, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px;
 }
-
-td{
-    width: 50%;
-    margin: auto;
-    padding: auto;
-    align-content: center;
-    border: solid 8px #252A85;
+#results {
+    font-family: 'Baloo';
+    color:#FE95B180;
+    text-shadow: 1px 2px 0 #fff , 1px 3px 0 #fff, -1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #1b233d, 0 1px 1px #1b233d, -1px -1px 1px #1b233d, 1px -1px 1px #1b233d, 2px -1px 1px #1b233d, 1px 1px 1px #1b233d, 2px 1px 1px #1b233d, 1px 2px 1px #1b233d,  2px 2px 1px #1b233d, 1px 3px 1px #1b233d, 2px 3px 1px #1b233d,0px 4px 1px #1b233d, 1px 4px 1px #1b233d, 2px 4px 1px #1b233d, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 1px 0 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d 0 1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d -1px -1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px, #1b233d 1px 1px 10px;
+    letter-spacing: .1em;
+    padding: 25px;
 }
 
 button {
+    margin: 10px 0;
+    width: 200px;
+    color: #fff;
+    text-shadow: -1px 0 1px #1b233d, 0 1px 1px #1b233d, -1px -1px 1px #1b233d, 1px -1px 1px #1b233d, 2px -1px 1px #1b233d, 1px 1px 1px #1b233d, 2px 1px 1px #1b233d, 1px 2px 1px #1b233d,  2px 2px 1px #1b233d;
+    font: normal 25px/1 'Baloo';
     box-sizing: content-box;
-    background-color: transparent;
-    background-repeat:no-repeat;
     padding: 8px;
-    border: none;
-    border-radius: 15%;
-    cursor:pointer;
+    background-color: #FFBCA7;
+    border: 1px solid #1b233d;
+    border-radius: 10px;
+    box-shadow: -1px 0 1px #1b233d, 0 1px 1px #1b233d, -1px -1px 1px #1b233d, 1px -1px 1px #1b233d, 2px -1px 1px #1b233d, 1px 1px 1px #1b233d, 2px 1px 1px #1b233d, 1px 2px 1px #1b233d,  2px 2px 1px #1b233d;
+
+    cursor: pointer;
     overflow: hidden;
 }
-
-button:hover {
-    box-shadow: 0 0 5px 5px #E8E7F3 inset;
+#start {
+    margin-top: 40px;
+    background-color: #9CDB54;
 }
-
+button:hover {
+    box-shadow: -1px 0 1px #bc2f66, 0 1px 1px #bc2f66, -1px -1px 1px #bc2f66, 1px -1px 1px #bc2f66, 2px -1px 1px #bc2f66, 1px 1px 1px #bc2f66, 2px 1px 1px #bc2f66, 1px 2px 1px #bc2f66,  2px 2px 1px #bc2f66;
+    /* box-shadow: 0 0 5px 5px #bc2f66 inset; */
+}
 button:active, :focus { 
-    box-shadow: 0 0 5px 5px #E05849 inset;
+    box-shadow: 0 0 5px 5px #75FEB8 inset;
     border: none;
     outline: none;
 }
-
-#attack{
-    background: #E05849;
-}
-#attack:focus{
-    box-shadow: 0 0 5px 5px #252A85 inset;
-}
-.defender{
-    background: #E8E7F34D;
-}
-
-.enemy{
-    background: #E058494D;
-}
-
 
 @keyframes animation {
     0% {

@@ -1,5 +1,5 @@
 var intervalId;
-var time = 3;
+var time;
 var correctCounter = 0;
 var incorrectCounter = 0;
 var unansweredCounter = 0;
@@ -34,7 +34,7 @@ window.onload = function() {
 };
 
 function quizGame() {
-  time = 3;
+  time = 10;
   correctCounter = 0;
   incorrectCounter = 0;
   unansweredCounter = 0;
@@ -42,7 +42,7 @@ function quizGame() {
   
   $("#start").hide();
   $( "#choices" ).html( "" );  
-  $("#timer").html("<h2> Time Remaining: " + time + "</h2>");
+  $("#timer").html("<p id='timeText'> Time Remaining: " + time + "</p>");
   clearInterval(intervalId);
   intervalId = setInterval(decrement, 1000);
 
@@ -53,7 +53,7 @@ function quizGame() {
 function quizQuestions(number) {
 
     var question = quiz[number].question;
-    $( "#question" ).html( question + " " );
+    $( "#question" ).html( "<p id='questionText'>" + question + "</p>" );
 
     var options = quiz[number].choices;
     for ( var opt in options ) {
@@ -89,7 +89,7 @@ function checkAnswer(answer){
 
 function decrement() {
   time--;
-  $("#timer").html("<h2> Time Remaining: " + time + "</h2>");
+  $("#timer").html("<p id='timeText'> Time Remaining: " + time + "</p>");
   if (time === 0) {
     unansweredCounter++;
     $( "#choices" ).html( "<p>Out of time!</p>" ); 
@@ -108,16 +108,16 @@ function resetQuestion() {
   if(questionCounter == quiz.length)
   {
     $( "#question" ).show();   
-    $( "#question" ).html("All done, here's how you did!");
-    $( "#choices" ).html( "<p> Correct Answers: " + correctCounter + "<br>"
+    $( "#question" ).html("<p>All done, here's how you did!</p>");
+    $( "#choices" ).html( "<p id ='results'> Correct Answers: " + correctCounter + "<br>"
     + "Incorrect Answers: " + incorrectCounter + "<br>"
     + "Unanswered: " + unansweredCounter + "</p>");  
     $("#start").show();
     $("#start").html("Start Over?");
   }
   else{
-    time = 3;
-    $("#timer").html("<h2> Time Remaining: " + time + "</h2>");
+    time = 10;
+    $("#timer").html("<p id='timeText'> Time Remaining: " + time + "</p>");
     $( "#question" ).show();   
     $( "#choices" ).html( "" );  
     clearInterval(intervalId);
