@@ -13,20 +13,32 @@ var quiz =
     question: "What kind of ice did Bee shove under the door?",
     choices: ["Ankle Ice", "Sprain Ice", "Crotch Ice", "Head Ice"],
     answer: "Crotch Ice",
-    image: "assets/images/crotch-ice.gif"
+    image: "assets/images/ice.gif"
   },
   {
     question: "Who does Bee have a crush on?",
     choices: ["Deckard", "Cardamon", "Puppycat", "Wallace"],
     answer: "Deckard",
-    image: "assets/images/deckard-crush.gif"
+    image: "assets/images/deckard.gif"
   },
   {
     question: "What is Deckard's sister's name?",
     choices: ["Lily", "Ann", "Opal", "Cass"],
     answer: "Cass",
     image: "assets/images/cass.gif"
-  }            
+  },
+  {
+    question: "What aminal annoyed Puppycat for a full episode?",
+    choices: ["Hedgehog", "Crab", "Squirrel", "Dog"],
+    answer: "Crab",
+    image: "assets/images/puppycat.gif"
+  },
+  {
+    question: "What did Cardamon use to fix the toilet?",
+    choices: ["Plunger", "Wrench", "Hammer", "Pipe"],
+    answer: "Hammer",
+    image: "assets/images/cardamon.gif"
+  }                   
 ];
 
 window.onload = function() {
