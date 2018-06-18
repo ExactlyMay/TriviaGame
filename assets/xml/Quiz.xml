@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Quiz>
+  <Questions>
+    <Question>Question: 1?</Question>
+    <Choices>Option 1A</Choices>
+    <Choices>Option 1B</Choices>
+    <Choices>Option 1C</Choices>
+    <Choices>Option 1D</Choices>
+  </Questions>
+  <Questions>
+    <Question>Question: 2?</Question>
+    <Choices>Option 2A</Choices>
+    <Choices>Option 2B</Choices>
+    <Choices>Option 2C</Choices>
+    <Choices>Option 2D</Choices>
+  </Questions>
+  <Questions>
+    <Question>Question: 3?</Question>
+    <Choices>Option 3A</Choices>
+    <Choices>Option 3B</Choices>
+    <Choices>Option 3C</Choices>
+    <Choices>Option 3D</Choices>
+  </Questions>
+  <Questions>
+    <Question>Question: 4?</Question>
+    <Choices>Option 4A</Choices>
+    <Choices>Option 4B</Choices>
+    <Choices>Option 4C</Choices>
+    <Choices>Option 4D</Choices>
+  </Questions>
+</Quiz>
+
